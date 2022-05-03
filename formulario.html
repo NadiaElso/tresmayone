@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="src/formulario.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <input type="checkbox" id="menu-bar" />
+      <label for="menu-bar">Menu</label>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Lista de Productos +</a>
+            <ul>
+              <li><a href="#">Lista de precios</a></li>
+              <li><a href="comprar.html">Comprar</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Contacto +</a>
+            <ul>
+              <li><a href="#">Formulario de contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="overlay">
+      <form onsubmit="event.preventDefault(); validateform() ">
+        <h1>Contactanos</h1>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" placeholder="Tu nombre" />
+        <small class="error"></small>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Tu Email" />
+        <small class="error"></small>
+
+        <label for="mensaje">Mensaje</label>
+        <input
+          type="text"
+          id="message"
+          placeholder="Tu mensaje"
+          row="6"
+        /><textarea name="" id="" cols="30" rows="10"></textarea>
+        <small class="error"></small>
+        <div class="center">
+          <input type="submit" value="Enviar Mensaje" />
+          <p id="success"></p>
+        </div>
+      </form>
+    </div>
+    <footer class="footer">
+      <div class="conteiner">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Supermercado Madariaga</h4>
+            <ul>
+              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="#">Nuestros Productos</a></li>
+              <li><a href="#">Política de la companía</a></li>
+              <li><a href="#">Programa de afiliación</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Preguntas frecuentes</h4>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Optiones de pagos</a></li>
+              <li><a href="#">Devoluciones</a></li>
+              <li><a href="#">Estado de la compra</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Only shopp</h4>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#">Descuentos</a></li>
+              <li><a href="#">Ofertas</a></li>
+              <li><a href="#">Tarjetas</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contactos</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="src/formulario.ts"></script>
+    <script src="formulario.js"></script>
+  </body>
+</html>

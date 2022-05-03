@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="src/comprar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <input type="checkbox" id="menu-bar" />
+      <label for="menu-bar">Menu</label>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Lista de Productos +</a>
+            <ul>
+              <li><a href="#">Lista de precios</a></li>
+              <li><a href="#">Comprar</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Contacto +</a>
+            <ul>
+              <li><a href="formulario.html">Formulario de contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="contenier">
+      <h1 class="heading">
+        <ion-icon class="cart-outline"></ion-icon>
+        <i class="fa-solid fa-cart-shopping"></i>
+        Shoping cart
+      </h1>
+      <div class="item-flex">
+        <section class="checkout">
+          <h2 class="section-heading">Payment Details</h2>
+          <div class="payment-form">
+            <div class="payment-method">
+              <button class="method selected">
+                <i class="fa-solid fa-credit-card"></i>
+                <span>Credit Card</span>
+                <i class="fa-regular fa-circle fa-regular fa-circle-check"></i>
+              </button>
+              <button class="method">
+                <i class="fa-brands fa-paypal"></i>
+                <span>PayPal</span>
+                <i class="fa-regular fa-circle fa-regular fa-circle-check"></i>
+              </button>
+            </div>
+            <form action="#">
+              <div class="cardholder-name">
+                <label for="" class="label-default">CardHolder Name</label>
+                <input
+                  type="text"
+                  name="cardholder-name"
+                  id="cardholder-name"
+                  class="input-default"
+                />
+              </div>
+              <div class="card-number">
+                <label for="" class="label-default">Card Number</label>
+                <input
+                  type="number"
+                  name="card-number"
+                  id="card-number"
+                  class="input-default"
+                />
+              </div>
+              <div class="input-flex">
+                <div class="expire-date">
+                  <label for="expire-date" class="label-default"
+                    >Expiration Date</label
+                  >
+                  <div class="input-flex">
+                    <input
+                      type="number"
+                      name="day"
+                      class="input-default"
+                      id="expire-date"
+                      placeholder="31"
+                      min="1"
+                      max="31"
+                    />
+                    /
+                    <input
+                      type="number"
+                      name="month"
+                      class="input-default"
+                      id="expire-date"
+                      placeholder="12"
+                      min="1"
+                      max="12"
+                    />
+                  </div>
+                </div>
+
+                <div class="CVV">
+                  <label for="" class="label-default">CVV</label>
+                  <input
+                    type="number"
+                    name="cvv"
+                    id="CVV"
+                    class="input-default"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <button class="btn btn-primary">
+            <b>Pay</b> $ <span id="pay-amount">2.15</span>
+          </button>
+        </section>
+        <section class="cart">
+          <div class="cart-item-box">
+            <h2 class="section-heading">Order Sumery</h2>
+            <div class="product-card">
+              <div class="card">
+                <div class="image-box">
+                  <img
+                    src="src/yerba.jpg"
+                    alt="yerba"
+                    width="80px"
+                    class="product-img"
+                  />
+                </div>
+                <div class="details">
+                  <h4 class="product-name">
+                    Yerba Mate
+                  </h4>
+                  <div class="wrapper">
+                    <div class="product-qty">
+                      <button id="decrement">
+                        <i class="fa-solid fa-square-minus"></i>
+                      </button>
+                      <span id="quantity">1</span>
+                      <button id="increment">
+                        <i class="fa-solid fa-square-plus"></i>
+                      </button>
+                    </div>
+                    <div class="price">$ <span id="price">1.25</span></div>
+                  </div>
+                </div>
+                <button class="product-close-btn">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="card">
+                <div class="image-box">
+                  <img
+                    src="src/azucar.jpg"
+                    alt="azucar"
+                    width="80px"
+                    class="product-img"
+                  />
+                </div>
+                <div class="details">
+                  <h4 class="product-name">
+                    Azucar
+                  </h4>
+                  <div class="wrapper">
+                    <div class="product-qty">
+                      <button id="decrement">
+                        <i class="fa-solid fa-square-minus"></i>
+                      </button>
+                      <span id="quantity">1</span>
+                      <button id="increment">
+                        <i class="fa-solid fa-square-plus"></i>
+                      </button>
+                    </div>
+                    <div class="price">$ <span class="price">2.25</span></div>
+                  </div>
+                </div>
+                <button class="product-close-btn">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div class="discount-token">
+              <label for="discount-token" class="default"
+                >Gift card/discount code</label
+              >
+
+              <div class="wrapper-flex">
+                <input
+                  type="text"
+                  id="discount-token"
+                  name="discount-token"
+                  class="input-default"
+                />
+                <button class="btn btn-outline">Apply</button>
+              </div>
+            </div>
+            <div class="amount">
+              <div class="subtotal">
+                <span>Subtotal</span>$ <span id="subtotal">2.05</span>
+              </div>
+              <div class="tax">
+                <span>Tax</span>$ <span id="tax">0.10</span>
+              </div>
+              <div class="shipping">
+                <span>Shipping</span>$ <span id="shipping">0.00</span>
+              </div>
+              <div class="total">
+                <span>Total</span>$ <span id="total">2.15</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="conteiner">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Supermercado Madariaga</h4>
+            <ul>
+              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="#">Nuestros Productos</a></li>
+              <li><a href="#">Política de la companía</a></li>
+              <li><a href="#">Programa de afiliación</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Preguntas frecuentes</h4>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Optiones de pagos</a></li>
+              <li><a href="#">Devoluciones</a></li>
+              <li><a href="#">Estado de la compra</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Only shopp</h4>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#">Descuentos</a></li>
+              <li><a href="#">Ofertas</a></li>
+              <li><a href="#">Tarjetas</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contactos</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/comprar.ts"></script>
+    <script src="comprar.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicon@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicon@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
+</html>
